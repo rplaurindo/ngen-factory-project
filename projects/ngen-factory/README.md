@@ -19,5 +19,6 @@ constructor() {
 	this.factoryClient = new GenericFactoryClient(this);
 }
 </code></pre>
-<p>Then you can use the <code>manufacture</code> and <code>manufactureCollection</code> method by <code>GenericFactoryClient</code> referency.</p>
+<p>Then you can use the <code>manufacture</code> and <code>manufactureCollection</code> method by <code>GenericFactoryClient</code> referency.<br>
+test</p>
 
