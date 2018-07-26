@@ -13,11 +13,24 @@
 <pre><code>manufacture(response: Response): GenericAbstractProduct&lt;T&gt;
 </code></pre>
 <p>So inside the constructor of this service instantiate <code>GenericFactoryClient&lt;T&gt;(this)</code>, where <code>this</code> is who implements the <code>manufacture</code> method. Like that:</p>
-<pre><code>private  factoryClient:  GenericFactoryClient&lt;T&gt;;
+<pre><code>export class YourService implements GenericAbstractFactory&lt;YourService&gt; {
 
-constructor() {
-	this.factoryClient = new GenericFactoryClient(this);
+	private  factoryClient:  GenericFactoryClient&lt;T&gt;;
+
+	constructor() {
+		this.factoryClient = new GenericFactoryClient(this);
+	}
+	
 }
 </code></pre>
 <p>Then you can use the <code>manufacture</code> and <code>manufactureCollection</code> method by <code>GenericFactoryClient</code> referency.</p>
+<p>If you want to return a <code>GenericAbstractProduct</code> in a service method, you can to catch the concrete object implementing the <code>getConcrete</code> method of this interface. Like that:</p>
+<pre><code>export class YourModel implements GenericAbstractProduct&lt;YourModel&gt; {
+
+	getConcrete(): YourModel {
+		return this;
+	}
+	
+}
+</code></pre>
 
