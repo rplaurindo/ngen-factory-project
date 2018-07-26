@@ -1,4 +1,4 @@
-<h1 id="ngenfactory">NGenFactory</h1>
+<h1 id="ngenfactory---angular-generic-factory">NGenFactory - Angular Generic Factory</h1>
 <h2 id="requirements">Requirements</h2>
 <blockquote>
 <ul>
