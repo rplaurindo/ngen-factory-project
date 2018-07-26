@@ -9,8 +9,7 @@
 <pre><code>$ npm i ngen-factory --save
 </code></pre>
 <h2 id="usage">Usage</h2>
-<p>Import <code>GenericAbstractFactory</code>, <code>GenericAbstractProduct</code> and <code>GenericFactoryClient</code>from <code>ngen-factory</code> in your service and implement the <code>GenericAbstractFactory&lt;T&gt;</code> interface, implementing the  <code>manufacture</code> method. This method should have this follow signature:</p>
-<p>Import <code>NGenFactory</code> from <code>ngen-factory</code> in your service and implement the <code>GenericAbstractFactory&lt;T&gt;</code> interface, implementing the  <code>manufacture</code> method. This method should have this follow signature:</p>
+<p>Import <code>NGenFactory</code> from <code>ngen-factory</code> in your service and implement the <code>GenericAbstractFactory&lt;T&gt;</code> interface, implementing the  <code>manufacture</code> method, like that:</p>
 <pre><code>import { NGenFactory } from 'ngen-factory';
 
 export class MyService implements NGenFactory.GenericAbstractFactory&lt;T&gt; {
