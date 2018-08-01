@@ -15,10 +15,12 @@ Import ```NGenFactory``` from ```ngen-factory``` in your service and implement t
 ```typescript
 import { NGenFactory } from 'ngen-factory';
 
-export class MyService implements NGenFactory.GenericAbstractFactory<T> {
+export class MyService implements NGenFactory.GenericAbstractFactory<MyService> {
 
-	manufacture(response: Response): NGenFactory.GenericAbstractProduct<T>
-		
+	manufacture(response: Response): NGenFactory.GenericAbstractProduct<MyService> {
+		return new MyModel(response);
+	}
+	
 }
 ```
 
