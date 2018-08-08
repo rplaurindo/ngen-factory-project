@@ -1,4 +1,4 @@
-# NGenFactory - Angular Generic Abstract Factory
+# NGenPattern - Angular Generic Pattern
 
 ## Requirements
 
@@ -6,33 +6,37 @@
 
 ## Installing
 
-	$ npm i ngen-factory --save
+	$ npm i ngen-pattern --save
 
 ## Usage
 
-Import ```NGenFactory``` from ```ngen-factory``` in your service and implement the ```GenericAbstractFactory<T>``` interface, implementing the  ```manufacture``` method, like that:
+### Creational Pattern
+
+#### Abstract Factory
+
+Import ```NGenPattern``` from ```ngen-pattern``` in your service and implement the ```NGenPattern.Creational.AbstractFactory.GenericAbstractFactory<T>``` interface, implementing the  ```manufacture``` method, like that:
 
 ```typescript
-import { NGenFactory } from 'ngen-factory';
+import { NGenPattern } from 'ngen-pattern';
 
-export class MyService implements NGenFactory.GenericAbstractFactory<MyService> {
+export class MyService implements NGenPattern.Creational.AbstractFactory.GenericAbstractFactory<MyService> {
 
-	manufacture(response: Response): NGenFactory.GenericAbstractProduct<MyService> {
+	manufacture(response: Response): NGenPattern.Creational.AbstractFactory.GenericAbstractProduct<MyService> {
 		return new MyModel(response);
 	}
 	
 }
 ```
 
-So inside the constructor of this service instantiate ```NGenFactory.GenericFactoryClient```, like that:
+So inside the constructor of this service instantiate ```NGenPattern.Creational.AbstractFactory.GenericFactoryClient```, like that:
 
 ```typescript
-export class MyService implements NGenFactory.GenericAbstractFactory<MyService> {
+export class MyService implements NGenPattern.Creational.AbstractFactory.GenericAbstractFactory<MyService> {
 	
-	private  factoryClient:  NGenFactory.GenericFactoryClient<MyService>;
+	private  factoryClient: NGenPattern.Creational.AbstractFactory.GenericFactoryClient<MyService>;
 	
 	constructor() {
-		this.factoryClient = new NGenFactory.GenericFactoryClient(this);
+		this.factoryClient = new NGenPattern.Creational.AbstractFactory.GenericFactoryClient(this);
 	}
 	
 }
@@ -45,7 +49,7 @@ Then you can use the ```manufacture``` and ```manufactureCollection``` method by
 If you want to return a ```GenericAbstractProduct<T>``` in a service method, you can to catch the concrete object implementing the ```getConcrete``` method of this interface. Like that:
 
 ```typescript
-export class MyModel implements NGenFactory.GenericAbstractProduct<MyModel> {
+export class MyModel implements NGenPattern.Creational.AbstractFactory.GenericAbstractProduct<MyModel> {
 
 	getConcrete(): MyModel {
 		return this;
