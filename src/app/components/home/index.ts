@@ -3,7 +3,7 @@ import {
     OnInit
 } from '@angular/core';
 
-import { NGenFactory } from 'ngen-factory';
+// import { NGenPattern } from 'ngen-pattern';
 
 
 @Component({

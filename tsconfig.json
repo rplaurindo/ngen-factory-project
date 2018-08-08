@@ -17,11 +17,11 @@
       "dom"
     ],
     "paths": {
-      "ngen-factory": [
-        "dist/ngen-factory"
+      "ngen-pattern": [
+        "dist/ngen-pattern"
       ],
-      "ngen-factory/*": [
-        "dist/ngen-factory/*"
+      "ngen-pattern/*": [
+        "dist/ngen-pattern/*"
       ]
     }
   }

@@ -1,7 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/ngen-factory",
-  "deleteDestPath": false,
+  "dest": "../../dist/ngen-pattern",
   "lib": {
     "entryFile": "src/public_api.ts"
   }
