@@ -1,0 +1,1 @@
+export { Flyweight } from './flyweight';
