@@ -3,7 +3,7 @@ import { GenericAbstractFlyweight } from "./generic-abstract-flyweight";
 
 export class GenericFlyweightWarehouse<T> {
 
-    private flyweights: Map<any, T>;
+    private flyweights: Map<any, GenericAbstractFlyweight<T>>;
 
     constructor() {
 
@@ -11,12 +11,12 @@ export class GenericFlyweightWarehouse<T> {
 
     add(key: any, reference: GenericAbstractFlyweight<T>) {
         if (!this.flyweights.has(key)) {
-            this.flyweights.set(key, reference.getFlyweight());
+            this.flyweights.set(key, reference);
         }
     }
 
     get(key: any): T {
-        return this.flyweights.get(key);
+        return this.flyweights.get(key).getConcrete();
     }
 
 }
@@ -27,7 +27,7 @@ export class GenericFlyweightWarehouse<T> {
 
 //     }
 
-//     getFlyweight(): TestModel {
+//     getConcrete(): TestModel {
 //         return this;
 //     }
 
