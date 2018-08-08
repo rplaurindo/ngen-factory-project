@@ -1,2 +1,2 @@
 export { GenericAbstractFlyweight } from './generic-abstract-flyweight';
-export { GenericFlyweightFactory } from './generic-flyweight-factory';
+export { GenericFlyweightWarehouse } from './generic-flyweight-warehouse';

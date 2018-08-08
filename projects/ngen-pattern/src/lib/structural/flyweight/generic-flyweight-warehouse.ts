@@ -1,7 +1,7 @@
 import { GenericAbstractFlyweight } from "./generic-abstract-flyweight";
 
 
-export class GenericFlyweightFactory<T> {
+export class GenericFlyweightWarehouse<T> {
 
     private flyweights: Map<any, T>;
 
@@ -35,7 +35,7 @@ export class GenericFlyweightFactory<T> {
 
 // class TestService {
 
-//     constructor(private flyweightFactory: GenericFlyweightFactory<TestModel>) {
+//     constructor(private flyweightFactory: GenericFlyweightWarehouse<TestModel>) {
 //         flyweightFactory.add(TestModel, new TestModel());
 //     }
 
