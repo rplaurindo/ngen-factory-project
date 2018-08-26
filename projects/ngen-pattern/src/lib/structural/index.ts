@@ -1,2 +1,1 @@
-import * as Structural from './module';
-export { Structural };
+export { Flyweight } from './flyweight/namespace';

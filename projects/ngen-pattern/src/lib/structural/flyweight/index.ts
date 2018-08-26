@@ -1,2 +1,2 @@
-import * as Flyweight from './module';
-export { Flyweight };
+export { GenericAbstractFlyweight } from './generic-abstract-flyweight';
+export { GenericFlyweightWarehouse } from './generic-flyweight-warehouse';

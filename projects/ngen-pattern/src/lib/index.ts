@@ -1,2 +1,2 @@
-export { Creational } from './creational';
-export { Structural } from './structural';
+export { Creational } from './creational/namespace';
+export { Structural } from './structural/namespace';

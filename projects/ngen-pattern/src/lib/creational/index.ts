@@ -1,2 +1,1 @@
-import * as Creational from './module';
-export { Creational };
+export { AbstractFactory } from './abstract-factory/namespace';
