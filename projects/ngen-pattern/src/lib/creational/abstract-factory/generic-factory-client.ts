@@ -8,21 +8,19 @@ export class GenericFactoryClient<T> {
 
     constructor(private manufacturer: GenericAbstractFactory<T>) { }
 
-    manufacture(response: Response): GenericAbstractProduct<T> {
-        return this.manufacturer.manufacture(response);
+    manufacture(object: Object): GenericAbstractProduct<T> {
+        return this.manufacturer.manufacture(object);
     }
 
-    manufactureCollection(response: Response): Array<GenericAbstractProduct<T>> {
+    manufactureCollection(object: Array<Object>): Array<GenericAbstractProduct<T>> {
         const
             collection: Array<GenericAbstractProduct<T>> = [];
 
         let
-            object: Response,
             model: GenericAbstractProduct<T>;
 
-        Object.keys(response).forEach((k) => {
-            object = response[k];
-            model = this.manufacture(object);
+        Object.keys(object).forEach((k) => {
+            model = this.manufacture(object[k]);
             collection.push(model);
         });
 
