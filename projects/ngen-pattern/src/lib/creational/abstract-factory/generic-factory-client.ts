@@ -12,21 +12,21 @@ export class GenericFactoryClient<T> {
         return this.manufacturer.manufacture(object);
     }
 
-    manufactureCollection(object: Array<Object>): Array<GenericAbstractProduct<T>> {
+    manufactureCollection(collection: Array<Object>): Array<GenericAbstractProduct<T>> {
         const
-            collection: Array<GenericAbstractProduct<T>> = [];
+            manufacturedCollection: Array<GenericAbstractProduct<T>> = [];
 
         let
             model: GenericAbstractProduct<T>;
 
-        Object.keys(object).forEach((k) => {
-            model = this.manufacture(object[k]);
-            collection.push(model);
+        collection.forEach((object) => {
+            model = this.manufacture(object);
+            manufacturedCollection.push(model);
         });
 
-        this.collection = collection;
+        this.collection = manufacturedCollection;
 
-        return collection;
+        return manufacturedCollection;
     }
 
 }
