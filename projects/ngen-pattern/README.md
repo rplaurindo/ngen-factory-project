@@ -21,8 +21,8 @@ import { NGenPattern } from 'ngen-pattern';
 
 export class MyService implements NGenPattern.Creational.AbstractFactory.GenericAbstractFactory<MyService> {
 
-	manufacture(response: Response): NGenPattern.Creational.AbstractFactory.GenericAbstractProduct<MyService> {
-		return new MyModel(response);
+	manufacture(object: Object): NGenPattern.Creational.AbstractFactory.GenericAbstractProduct<MyService> {
+		return new MyModel(object);
 	}
 	
 }
