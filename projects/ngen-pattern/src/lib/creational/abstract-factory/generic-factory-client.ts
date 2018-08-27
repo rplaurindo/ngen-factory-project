@@ -4,8 +4,6 @@ import { GenericAbstractProduct } from './generic-abstract-product';
 
 export class GenericFactoryClient<T> {
 
-    private collection: Array<GenericAbstractProduct<T>>;
-
     constructor(private manufacturer: GenericAbstractFactory<T>) { }
 
     manufacture(object: Object): GenericAbstractProduct<T> {
@@ -23,8 +21,6 @@ export class GenericFactoryClient<T> {
             model = this.manufacture(object);
             manufacturedCollection.push(model);
         });
-
-        this.collection = manufacturedCollection;
 
         return manufacturedCollection;
     }
