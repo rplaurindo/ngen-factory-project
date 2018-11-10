@@ -1,4 +1,4 @@
 import * as NGenPattern from './lib';
 export { NGenPattern };
 
-export { NGenPatternModule } from './lib/module';
+// export { NGenPatternModule } from './lib';
